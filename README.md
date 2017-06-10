@@ -40,6 +40,35 @@ On dist folder you can find a prebuilt version of the app ready for deployment.
 |redux-thunk|Async redux library|
 |toastr|Display messages to the user|
 
+### Deploying on Azure ?
+
+Dont forget to add Web.config file for deep linking to work properly. My Deployment was done by geting dist folder files into an empty visual studio website project and then adding the web config configuration below. Project was publish via web deploy.
+
+```
+<?xml version=”1.0"?>
+<configuration>
+ <system.webServer>
+ <rewrite>
+ <rules>
+ <rule name=”React Routes” stopProcessing=”true”>
+ <match url=”.*” />
+ <conditions logicalGrouping=”MatchAll”>
+ <add input=”{REQUEST_FILENAME}” matchType=”IsFile” negate=”true” />
+ <add input=”{REQUEST_FILENAME}” matchType=”IsDirectory” negate=”true” />
+ <add input=”{REQUEST_URI}” pattern=”^/(api)” negate=”true” />
+ </conditions>
+ <action type=”Rewrite” url=”/” />
+ </rule>
+ </rules>
+ </rewrite>
+ </system.webServer>
+</configuration>
+```
+
+### Trouble with Npm/Node ?
+
+The current dev enivroment is from boilerplate react/redux dev starter kit and is only tested on pc with Windows10 and Node 6. Make sure to run console with administrator rights and try to delete node_modules and rerun npm install if something seems to fail. Lastly dont forget to close any open console before starting a build.
+
 
 
 
