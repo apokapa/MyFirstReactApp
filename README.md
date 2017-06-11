@@ -9,6 +9,12 @@ MyFirstReactApp
 
 http://reactcrud.azurewebsites.net
 
+#### Default user credentials to login
+{
+username : pink,
+password : floyd
+}
+
 ## What you will find here
 
 This is a React SPA crud with basic login/logout flow. Applications uses Redux  to implement unidirectional data flow pattern. The application uses a fake js api (mockApi.js) for its operations. Manipulated Data and login status are not persistant after full page refresh. Application's entry point is index.js Where the initial store configuration,data, and routing setup takes place. Check for protected routes is done on index.js via checkLoginStatus that checks loggedIn status before leting access to those routes and redirects user to /login if needed. App.js is the parent component and consists of header component, children component (via prop from router) and lastly footer component.
