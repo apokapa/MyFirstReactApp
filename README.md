@@ -22,7 +22,7 @@ On dist folder you can find a prebuilt version of the app ready for deployment.
 3. **Open console on repository folder
 4. **Install Node Packages. - `npm install`
 5. **Run the app on dev enviroment - `npm start`
-6. **Build the app. - `npm run build`
+6. **Or Build the app. for deploy - `npm run build`
 7. **Or use the build already in the /dist folder.
 
 ### App Dependencies
