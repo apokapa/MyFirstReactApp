@@ -7,7 +7,7 @@ MyFirstReactApp
 ## Azure Deployment 
 (if it wasnt used recently may take a while for first load since it is deployed on a free azure app plan)
 
-http://reactcrud.azurewebsites.net
+http://reactcrudpro.azurewebsites.net/
 
 #### Default user credentials to login
 {
